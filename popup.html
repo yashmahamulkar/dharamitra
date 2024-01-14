@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* Styles for the pop-up block */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Styles for the pop-up content */
+        .popup-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Button to trigger the pop-up -->
+<button id="showPopupBtn">Show Pop-up</button>
+
+<!-- The pop-up block -->
+<div id="popup" class="popup">
+    <!-- Pop-up content -->
+    <div class="popup-content">
+        <h2>Pop-up Content</h2>
+        <p>This is a simple pop-up block.</p>
+        <!-- Close button to hide the pop-up -->
+        <button id="closePopupBtn">Close</button>
+    </div>
+</div>
+
+<script>
+    // Get the pop-up and button elements
+    var popup = document.getElementById('popup');
+    var showPopupBtn = document.getElementById('showPopupBtn');
+    var closePopupBtn = document.getElementById('closePopupBtn');
+
+    // Function to show the pop-up
+    function showPopup() {
+        popup.style.display = 'block';
+    }
+
+    // Function to hide the pop-up
+    function closePopup() {
+        popup.style.display = 'none';
+    }
+
+    // Add click event listeners to the buttons
+    showPopupBtn.addEventListener('click', showPopup);
+    closePopupBtn.addEventListener('click', closePopup);
+</script>
+
+</body>
+</html>
